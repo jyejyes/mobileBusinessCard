@@ -111,7 +111,7 @@ const CardWrapper = styled.div<CardProps>`
     aspect-ratio: 1/1;
 
     transform: ${(props) =>
-      props.isMouseOver ? "translate3d(0,0,150px)" : ""};
+      props.isMouseOver ? "translate3d(0,0,100px)" : ""};
     transition: all 0.3s ease;
   }
 `;
@@ -136,17 +136,21 @@ const Information = styled.div<InformationProps>`
 
   .name {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: "Pretendard-Bold";
 
     ${Common.mediaQuery.mobile} {
       font-size: 2.5rem;
     }
   }
+
   .position {
     font-size: 1.6rem;
     margin-bottom: 3rem;
     font-weight: 500;
+    font-family: "Pretendard-Medium";
   }
+
   .contact {
     display: flex;
     gap: 1rem;
