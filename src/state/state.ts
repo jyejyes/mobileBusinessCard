@@ -4,5 +4,5 @@ type ColorChoiceType = {
   colorIndex: number;
 };
 export const colorChoice = proxy<ColorChoiceType>({
-  colorIndex: 6,
+  colorIndex: 0,
 });
