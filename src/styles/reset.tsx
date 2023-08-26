@@ -98,7 +98,7 @@ const reset = css`
 
     font-size: 62.5%;
     font-weight: normal;
-    font-family: "Pretendard-Regular", sans-serif;
+    font-family: "Pretendard-Regular",'Apple SD Gothic Neo', sans-serif;
   }
 
   article,
