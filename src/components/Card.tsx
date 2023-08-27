@@ -129,7 +129,7 @@ const Information = styled.div<InformationProps>`
 
   .name {
     font-size: 3rem;
-    font-family: "LeferiBaseType-BoldA";
+    font-family: "Pretendard-Bold";
 
     ${Common.mediaQuery.mobile} {
       font-size: 2.5rem;
