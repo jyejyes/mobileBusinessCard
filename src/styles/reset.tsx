@@ -6,6 +6,7 @@ const reset = css`
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: "Pretendard-Medium"
   }
   
   
@@ -98,7 +99,7 @@ const reset = css`
 
     font-size: 62.5%;
     font-weight: normal;
-    font-family: "Pretendard-Medium",'Apple SD Gothic Neo', sans-serif;
+    font-family: "Pretendard-Medium",'Apple SD Gothic Neo','Noto Sans KR', sans-serif;
   }
 
   article,
