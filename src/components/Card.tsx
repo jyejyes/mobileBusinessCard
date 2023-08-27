@@ -43,12 +43,12 @@ export const Card = () => {
         <p className="number">010-2939-9481</p>
 
         <div className="contact">
-          <EmailIcon width={16} height={16} />
+          <EmailIcon width={14} height={14} />
 
           <p>jh100m1@gmail.com</p>
         </div>
         <div className="contact">
-          <InstagramIcon width={16} height={16} />
+          <InstagramIcon width={14} height={14} />
 
           <p>zerilog</p>
         </div>
@@ -114,7 +114,7 @@ const Information = styled.div<InformationProps>`
   width: 100%;
 
   display: flex;
-  gap: 1.5rem;
+  gap: 1.4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -137,7 +137,7 @@ const Information = styled.div<InformationProps>`
   }
 
   .number {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 3rem;
     font-weight: 500;
   }
@@ -148,7 +148,7 @@ const Information = styled.div<InformationProps>`
     align-items: center;
 
     & > p {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       font-weight: 500;
     }
 
