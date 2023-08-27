@@ -146,6 +146,7 @@ const Information = styled.div<InformationProps>`
     display: flex;
     gap: 1rem;
     align-items: center;
+    font-family: "Pretendard-Medium";
 
     & > p {
       font-size: 1.3rem;
