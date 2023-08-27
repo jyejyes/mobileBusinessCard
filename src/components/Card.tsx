@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { ReactComponent as EmailIcon } from "../../public/assets/ic-email.svg";
-import { ReactComponent as PhoneIcon } from "../../public/assets/ic-phone.svg";
 import { ReactComponent as InstagramIcon } from "../../public/assets/ic-instagram.svg";
 import { useState } from "react";
 import { Common } from "../styles/Common.ts";
@@ -13,8 +12,8 @@ export const Card = () => {
   const [isMouseOver, setIsMouseOver] = useState(false);
   const [cardRotation, setCardRotation] = useState({ x: 0, y: 0 });
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const x = (innerWidth / 2 - e.pageX) / 20;
-    const y = (innerHeight / 2 - e.pageY) / 20;
+    const x = (innerWidth / 2 - e.pageX) / 25;
+    const y = (innerHeight / 2 - e.pageY) / 25;
 
     setCardRotation({ x, y });
   };
@@ -37,17 +36,12 @@ export const Card = () => {
       isMouseOver={isMouseOver}
       colorIndex={colorIndex}
     >
-      <img src="https://picsum.photos/200/302" alt="brie" />
+      <img src="../../../public/images/img-rabbit.jpg" alt="brie" />
 
       <Information isMouseOver={isMouseOver} colorIndex={colorIndex}>
         <h1 className="name">박지혜</h1>
-        <p className="position">FRONTEND DEVELOPER</p>
+        <p className="number">010-2939-9481</p>
 
-        <div className="contact">
-          <PhoneIcon width={16} height={16} />
-
-          <p>010-2939-9481</p>
-        </div>
         <div className="contact">
           <EmailIcon width={16} height={16} />
 
@@ -87,7 +81,7 @@ const CardWrapper = styled.div<CardProps>`
   transform: rotateY(${(props) => props.rotation.x}deg)
     rotateX(${(props) => props.rotation.y}deg);
   transform-style: preserve-3d;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 
   padding: 50px 0 60px;
 
@@ -98,7 +92,7 @@ const CardWrapper = styled.div<CardProps>`
   justify-content: space-between;
   align-items: center;
 
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
 
   ${Common.mediaQuery.mobile} {
     padding: 40px 0 40px;
@@ -110,9 +104,9 @@ const CardWrapper = styled.div<CardProps>`
     width: 55%;
     aspect-ratio: 1/1;
 
-    transform: ${(props) =>
-      props.isMouseOver ? "translate3d(0,0,100px)" : ""};
     transition: all 0.3s ease;
+
+    object-fit: cover;
   }
 `;
 
@@ -125,7 +119,6 @@ const Information = styled.div<InformationProps>`
   justify-content: center;
   align-items: center;
 
-  transform: ${(props) => (props.isMouseOver ? "translate3d(0,0,80px)" : "")};
   transition: all 0.3s ease;
 
   color: ${(props) => Common.colors[props.colorIndex].text};
@@ -144,7 +137,7 @@ const Information = styled.div<InformationProps>`
     }
   }
 
-  .position {
+  .number {
     font-size: 1.6rem;
     margin-bottom: 3rem;
     font-weight: 500;
