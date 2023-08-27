@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Common } from "../styles/Common.ts";
 import { colorChoice } from "../state/state.ts";
 import { useSnapshot } from "valtio";
+import { IMAGE_URL } from "../../static/imageUrl.ts";
 
 export const Card = () => {
   const { colorIndex } = useSnapshot(colorChoice);
@@ -36,7 +37,7 @@ export const Card = () => {
       isMouseOver={isMouseOver}
       colorIndex={colorIndex}
     >
-      <img src="/images/img-rabbit.jpg" alt="brie" />
+      <img src={IMAGE_URL[colorIndex]} alt="brie" />
 
       <Information isMouseOver={isMouseOver} colorIndex={colorIndex}>
         <h1 className="name">박지혜</h1>
