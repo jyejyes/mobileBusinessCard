@@ -36,7 +36,7 @@ export const Card = () => {
       isMouseOver={isMouseOver}
       colorIndex={colorIndex}
     >
-      <img src="../../../public/images/img-rabbit.jpg" alt="brie" />
+      <img src="/images/img-rabbit.jpg" alt="brie" />
 
       <Information isMouseOver={isMouseOver} colorIndex={colorIndex}>
         <h1 className="name">박지혜</h1>
