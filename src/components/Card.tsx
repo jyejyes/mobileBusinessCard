@@ -81,7 +81,7 @@ const CardWrapper = styled.div<CardProps>`
   transform: rotateY(${(props) => props.rotation.x}deg)
     rotateX(${(props) => props.rotation.y}deg);
   transform-style: preserve-3d;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 
   padding: 50px 0 60px;
 
