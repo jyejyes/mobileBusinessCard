@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { Global } from "@emotion/react";
-import reset from "./styles/reset.tsx";
+import { globalStyle } from "./styles/globalStyle.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Global styles={reset} />
+    <Global styles={globalStyle} />
     <App />
   </React.StrictMode>,
 );

@@ -34,7 +34,7 @@ export default App;
 
 const Wrapper = styled.div<{ colorIndex: number }>`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   position: relative;
 
