@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { ReactComponent as EmailIcon } from "../../public/assets/ic-email.svg";
 import { ReactComponent as InstagramIcon } from "../../public/assets/ic-instagram.svg";
+import { ReactComponent as PhoneIcon } from "../../public/assets/ic-phone.svg";
 import { useState } from "react";
 import { Common } from "../styles/Common.ts";
 import { colorChoice } from "../state/state.ts";
@@ -41,12 +42,17 @@ export const Card = () => {
 
       <Information isMouseOver={isMouseOver} colorIndex={colorIndex}>
         <h1 className="name">박지혜</h1>
-        <p className="number">010-2939-9481</p>
+        <p className="number">FE DEVELOPER</p>
 
         <div className="contact">
           <EmailIcon width={14} height={14} />
 
           <p>jh100m1@gmail.com</p>
+        </div>
+        <div className="contact">
+          <PhoneIcon width={14} height={14} />
+
+          <p>010-2939-9481</p>
         </div>
         <div className="contact">
           <InstagramIcon width={14} height={14} />
