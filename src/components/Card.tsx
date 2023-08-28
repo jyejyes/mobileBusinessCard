@@ -54,11 +54,11 @@ export const Card = () => {
 
           <p>010-2939-9481</p>
         </div>
-        <div className="contact">
-          <InstagramIcon width={14} height={14} />
+        {/*<div className="contact">*/}
+        {/*  <InstagramIcon width={14} height={14} />*/}
 
-          <p>zerilog</p>
-        </div>
+        {/*  <p>zerilog</p>*/}
+        {/*</div>*/}
       </Information>
     </CardWrapper>
   );
