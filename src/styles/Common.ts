@@ -7,6 +7,7 @@ export const Common = {
     { main: "#fff1eb", sub: "#ace0f9", text: "#377BC3", cardBg: "#FEFEFE" },
     { main: "#a1c4fd", sub: "#c2e9fb", text: "#377BC3", cardBg: "#E8F5FB" },
     { main: "#e9defa", sub: "#cd9cf2", text: "#8B32A7", cardBg: "#FAEAFC" },
+    { main: "#616161", sub: "#243949", text: "#243949", cardBg: "#dddddd" },
   ],
 
   mediaQuery: {

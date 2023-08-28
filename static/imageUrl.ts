@@ -6,4 +6,5 @@ export const IMAGE_URL = [
   "/images/img-sky.jpg",
   "/images/img-sky.jpg",
   "/images/img-mirror.jpg",
+  "/images/img-sunglass.jpg",
 ];
