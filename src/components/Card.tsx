@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { ReactComponent as EmailIcon } from "../../public/assets/ic-email.svg";
-import { ReactComponent as InstagramIcon } from "../../public/assets/ic-instagram.svg";
+// import { ReactComponent as InstagramIcon } from "../../public/assets/ic-instagram.svg";
 import { ReactComponent as PhoneIcon } from "../../public/assets/ic-phone.svg";
 import { useState } from "react";
 import { Common } from "../styles/Common.ts";
