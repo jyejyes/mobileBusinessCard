@@ -32,12 +32,13 @@ export const Common = {
 #### state 파일 : 배열의 인덱스를 지정해주는 파일
 간단하게 변경하고 사용할 수 있는 전역 상태 라이브러리인 valtio를 사용해주었다.   
 index를 설정해주고
-```
+```ts
 import { proxy } from "valtio";
 
 type ColorChoiceType = {
   colorIndex: number;
 };
+
 export const colorChoice = proxy<ColorChoiceType>({
   colorIndex: 0,
 });
@@ -52,9 +53,43 @@ const handleChangeColorIndex = () => {
 };
 ```
 
+#### <Card 컴포넌트>
+```ts
+const { colorIndex } = useSnapshot(colorChoice); //valtio로 설정해준 theme arr index
+
+return (
+   <CardWrapper
+      ...
+      colorIndex={colorIndex}
+   >
+    ...
+   </CardWrapper>
+)
+
+
+//css
+type CardProps = {
+  rotation: { x: number; y: number };
+  colorIndex: number;
+};
+
+const CardWrapper = styled.div<CardProps>`
+  background: ${(props) => Common.colors[props.colorIndex].cardBg};
+`
+```
+미리 지정해둔 Common 의 colors 배열에서 index로 접근하여 색상을 변경하는 방식.   
+전체 배경에도 아래처럼 같은 방법을 사용하였다.   
+```ts
+background: ${(props) =>
+    `linear-gradient(135deg, ${Common.colors[`${props.colorIndex}`].main} 0%, ${
+      Common.colors[`${props.colorIndex}`].sub
+    } 100%)`};
+```
+
+
 ### 2. 마우스 오버 시 효과
 #### <App.tsx 파일>
-```
+```ts
 return(
    <Wrapper>
       <Card/>
@@ -67,7 +102,7 @@ const Wrapper = styled.div<{ colorIndex: number }>`
 `
 ```
 #### <Card 컴포넌트>
-```
+```ts
 const [cardRotation, setCardRotation] = useState({ x: 0, y: 0 });
 
 const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -97,6 +132,7 @@ return (
 //css
 type CardProps = {
   rotation: { x: number; y: number };
+  colorIndex: number;
 };
 
 const CardWrapper = styled.div<CardProps>`
