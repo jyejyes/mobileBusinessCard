@@ -11,7 +11,6 @@ import { IMAGE_URL } from "../../static/imageUrl.ts";
 export const Card = () => {
   const { colorIndex } = useSnapshot(colorChoice);
 
-  const [isMouseOver, setIsMouseOver] = useState(false);
   const [cardRotation, setCardRotation] = useState({ x: 0, y: 0 });
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const x = (innerWidth / 2 - e.pageX) / 25;
@@ -20,27 +19,20 @@ export const Card = () => {
     setCardRotation({ x, y });
   };
 
-  const handleMouseOver = () => {
-    setIsMouseOver(true);
-  };
-
   const handleMouseOut = () => {
     setCardRotation({ x: 0, y: 0 });
-    setIsMouseOver(false);
   };
 
   return (
     <CardWrapper
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseOut}
-      onMouseOver={handleMouseOver}
       rotation={cardRotation}
-      isMouseOver={isMouseOver}
       colorIndex={colorIndex}
     >
       <img src={IMAGE_URL[colorIndex]} alt="brie" />
 
-      <Information isMouseOver={isMouseOver} colorIndex={colorIndex}>
+      <Information colorIndex={colorIndex}>
         <h1 className="name">박지혜</h1>
         <p className="number">FE DEVELOPER</p>
 
@@ -66,12 +58,10 @@ export const Card = () => {
 
 type CardProps = {
   rotation: { x: number; y: number };
-  isMouseOver: boolean;
   colorIndex: number;
 };
 
 type InformationProps = {
-  isMouseOver: boolean;
   colorIndex: number;
 };
 
