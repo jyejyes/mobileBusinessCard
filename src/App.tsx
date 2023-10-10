@@ -14,7 +14,18 @@ function App() {
   const handleChangeColorIndex = () => {
     const max = Common.colors.length - 1;
 
-    colorChoice.colorIndex = Math.floor(Math.random() * (max + 1));
+    if (colorIndex === max) {
+      colorChoice.colorIndex = 0;
+
+      return;
+    }
+
+    /**
+     *
+     */
+    colorChoice.colorIndex += 1;
+
+    // colorChoice.colorIndex = Math.floor(Math.random() * (max + 1));
   };
 
   return (
