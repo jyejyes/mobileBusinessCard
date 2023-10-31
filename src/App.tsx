@@ -20,18 +20,13 @@ function App() {
       return;
     }
 
-    /**
-     *
-     */
-    colorChoice.colorIndex += 1;
-
-    // colorChoice.colorIndex = Math.floor(Math.random() * (max + 1));
+    colorChoice.colorIndex = Math.floor(Math.random() * (max + 1));
   };
 
   return (
     <Wrapper colorIndex={colorIndex}>
       <Button onClick={handleChangeColorIndex}>
-        <ChangeIcon width={28} height={28} />
+        <Change width={28} height={28} />
       </Button>
 
       <Card />
@@ -66,4 +61,20 @@ const Wrapper = styled.div<{ colorIndex: number }>`
     `linear-gradient(135deg, ${Common.colors[`${props.colorIndex}`].main} 0%, ${
       Common.colors[`${props.colorIndex}`].sub
     } 100%)`};
+`;
+
+const Change = styled(ChangeIcon)`
+  animation: scale 1s linear infinite;
+
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 `;
