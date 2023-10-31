@@ -44,7 +44,7 @@ export const Card = () => {
         <div className="contact">
           <PhoneIcon width={14} height={14} />
 
-          <p>010-2939-9481</p>
+          <p>-</p>
         </div>
         {/*<div className="contact">*/}
         {/*  <InstagramIcon width={14} height={14} />*/}
