@@ -1,12 +1,12 @@
-import styled from "@emotion/styled";
-import { ReactComponent as EmailIcon } from "../../public/assets/ic-email.svg";
+import styled from '@emotion/styled';
+import { ReactComponent as EmailIcon } from '../../public/assets/ic-email.svg';
 // import { ReactComponent as InstagramIcon } from "../../public/assets/ic-instagram.svg";
-import { ReactComponent as PhoneIcon } from "../../public/assets/ic-phone.svg";
-import { useState } from "react";
-import { Common } from "../styles/Common.ts";
-import { colorChoice } from "../state/state.ts";
-import { useSnapshot } from "valtio";
-import { IMAGE_URL } from "../../static/imageUrl.ts";
+import { ReactComponent as PhoneIcon } from '../../public/assets/ic-phone.svg';
+import { useState } from 'react';
+import { Common } from '../styles/Common.ts';
+import { colorChoice } from '../state/state.ts';
+import { useSnapshot } from 'valtio';
+import { IMAGE_URL } from '../../static/imageUrl.ts';
 
 export const Card = () => {
   const { colorIndex } = useSnapshot(colorChoice);
@@ -30,18 +30,18 @@ export const Card = () => {
       rotation={cardRotation}
       colorIndex={colorIndex}
     >
-      <img src={IMAGE_URL[colorIndex]} alt="brie" />
+      <img src={IMAGE_URL[colorIndex]} alt='brie' />
 
       <Information colorIndex={colorIndex}>
-        <h1 className="name">박지혜</h1>
-        <p className="number">FE DEVELOPER</p>
+        <h1 className='name'>박지혜</h1>
+        <p className='number'>프론트엔드 개발자</p>
 
-        <div className="contact">
+        <div className='contact'>
           <EmailIcon width={14} height={14} />
 
           <p>jh100m1@gmail.com</p>
         </div>
-        <div className="contact">
+        <div className='contact'>
           <PhoneIcon width={14} height={14} />
 
           <p>-</p>
@@ -126,7 +126,7 @@ const Information = styled.div<InformationProps>`
 
   .name {
     font-size: 3rem;
-    font-family: "Pretendard-Bold";
+    font-family: 'Pretendard-Bold';
 
     ${Common.mediaQuery.mobile} {
       font-size: 2.5rem;
@@ -143,7 +143,7 @@ const Information = styled.div<InformationProps>`
     display: flex;
     gap: 1rem;
     align-items: center;
-    font-family: "Pretendard-Medium";
+    font-family: 'Pretendard-Medium';
 
     & > p {
       font-size: 1.3rem;
