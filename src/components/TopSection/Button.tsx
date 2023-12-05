@@ -12,6 +12,8 @@ type Props = {
 export const Button = ({ children, ...props }: Props) => {
   const { colorIndex } = useSnapshot(colorChoice);
 
+  console.log('바보')
+
   return (
     <ButtonWrapper
       aria-label={"change theme"}
