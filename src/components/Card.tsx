@@ -33,7 +33,7 @@ export const Card = () => {
       <img src={IMAGE_URL[colorIndex]} alt='brie' />
 
       <Information colorIndex={colorIndex}>
-        <h1 className='name'>박지혜</h1>
+        <h1 className='name'>박지혜(브리)</h1>
         <p className='number'>프론트엔드 개발자</p>
 
         <div className='contact'>
